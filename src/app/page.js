@@ -8,7 +8,7 @@ const INITIAL_EXPENSES = [
       id: 'e1',
       title: 'Motor Insurance',
       amount: 200.59,
-      date: new Date(2025, 3, 30)
+      date: new Date(2019, 3, 30)
     },
     {
       id: 'e2',
@@ -20,13 +20,13 @@ const INITIAL_EXPENSES = [
       id: 'e3',
       title: 'food',
       amount: 1500,
-      date:new Date(2025, 1, 28)
+      date:new Date(2024, 1, 28)
     },
     {
       id: 'e4',
       title: 'family',
       amount: 2000,
-      date: new Date(2025, 0, 31)
+      date: new Date(2022, 0, 31)
     },
   ]
 

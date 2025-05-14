@@ -3,18 +3,20 @@ import ExpenseItem from "./ExpenseItem";
 
 export default function ExpenseList(props) {
     
-    let expenseContent = <p className="text-center text-gray-800">No expenses found</p>
-    
-    if(props.items.length > 0) {
-        expenseContent = props.items.map((expense) => (
-            <ExpenseItem
-                key={expense.id}
-                title={expense.title}
-                amount={expense.amount}
-                date={expense.date}
-            />
-        ));
+    if (props.items.length === 0) {
 
+        return <h2 className="text-center text-gray-800">Found no expenses</h2>
     }
-    return <div>{expenseContent}</div>
-};
+    return (
+        <ul>
+            {props.items.map((expense) => (
+                <ExpenseItem
+                    key={expense.id}
+                    title={expense.title}
+                    amount={expense.amount}
+                    date={expense.date}
+                />
+        ))};
+    </ul>
+    );
+}
